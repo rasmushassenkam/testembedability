@@ -13,7 +13,7 @@ const cors = initMiddleware(
 dbConnect();
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  await cors(req, res);
+  // await cors(req, res);
   switch (req.method) {
     case "GET": {
       const users = await User.find();
